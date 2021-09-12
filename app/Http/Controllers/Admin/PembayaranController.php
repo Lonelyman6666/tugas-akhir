@@ -15,10 +15,7 @@ class PembayaranController extends Controller
 {
     //
     public function index(){
-        $pembayaran = Pembayaran::Join('tbl_sewa','tbl_pembayaran.id_sewa','=','tbl_sewa.id')
-                ->Join('tbl_penghuni','tbl_sewa.id_penghuni','=','tbl_penghuni.id')
-                ->select('tbl_pembayaran.*','tbl_penghuni.username_penghuni')
-                ->get();
+        $pembayaran = Pembayaran::with('sewaRef')->get();
         return view('admin.pembayaran.pembayaran',compact('pembayaran'));
     }
     public function create(){

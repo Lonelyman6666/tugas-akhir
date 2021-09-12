@@ -46,7 +46,7 @@
                     @foreach ( $pembayaran as $p)
                     <tr>
                       <td>{{$no++}}</td>  
-                      <td>{{$p->username_penghuni}}</td>
+                      <td>{{$p->sewaRef->penghuniRef->username_penghuni}} (No {{$p->sewaRef->kamarRef->no_kamar}} {{$p->sewaRef->kamarRef->cabangRef->nama_cabang}})</td>
                       <td>{{$p->bulan}}</td>
                       <td>{{$p->bayar_sewa}}</td>
                       <td>{{$p->sisa_pembayaran}}</td>
