@@ -37,6 +37,26 @@
                       </div>
                     </div>
                     <div class="form-group row">
+                      <label class="control-label col-md-3">Pembayaran Bulan</label>
+                      <div class="col-md-8">
+                          <select name="bulan" id="status" class="form-control">
+                            <option value="{{$pembayaran->bulan}}">{{$pembayaran->bulan}}</option>
+                              <option value="Januari">Januari</option>
+                              <option value="Februari">Februari</option>
+                              <option value="Maret">Maret</option>
+                              <option value="April">April</option>
+                              <option value="Mei">Mei</option>
+                              <option value="Juni">Juni</option>
+                              <option value="Juli">Juli</option>
+                              <option value="Agustus">Agustus</option>
+                              <option value="September">September</option>
+                              <option value="Oktober">Oktober</option>
+                              <option value="Nopember">Nopember</option>
+                              <option value="Desember">Desember</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
                       <label class="control-label col-md-3">Tanggal Pembayaran</label>
                       <div class="col-md-8">
                         <input class="form-control" type="date" name="tanggal" value="{{$pembayaran->tanggal_pembayaran}}" placeholder="Pilih Tanggal Pembayaran" required>

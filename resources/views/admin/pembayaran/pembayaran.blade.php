@@ -32,6 +32,7 @@
                     <tr>
                       <th>No</th>
                       <th>Nama Penghuni</th>
+                      <th>Pembayaran Bulan</th>
                       <th>Bayar</th>
                       <th>Sisa</th>
                       <th>Tanggal</th>
@@ -46,6 +47,7 @@
                     <tr>
                       <td>{{$no++}}</td>  
                       <td>{{$p->username_penghuni}}</td>
+                      <td>{{$p->bulan}}</td>
                       <td>{{$p->bayar_sewa}}</td>
                       <td>{{$p->sisa_pembayaran}}</td>
                       <td>{{$p->tanggal_pembayaran}}</td>
@@ -58,8 +60,9 @@
                             </button>
                             <div class="dropdown-menu">
                               <a class="dropdown-item" href="{{route('editpembayaran-admin',$p->id)}}">Edit</a>
-                              <a class="dropdown-item" href="{{route('hapuspembayaran-admin',$p->id)}}">Hapus</a>
-                              <a class="dropdown-item" href="{{route('konfirmasipembayaran-admin',$p->id)}}">Konfirmasi</a>
+                              @if($p->status_pembayaran == "Menunggu" )
+                                <a class="dropdown-item" href="{{route('konfirmasipembayaran-admin',$p->id)}}">Konfirmasi</a>
+                              @endif
                             </div>
                           </div>
                       </td>

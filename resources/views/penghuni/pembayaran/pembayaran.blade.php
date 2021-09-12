@@ -31,6 +31,7 @@
                     <tr>
                       <th>No</th>
                       <th>Nama Penghuni</th>
+                      <th>Pembayaran Bulan</th>
                       <th>Bayar</th>
                       <th>Sisa</th>
                       <th>Tanggal</th>
@@ -43,6 +44,7 @@
                     <tr>
                       <td>{{$no++}}</td>  
                       <td>{{$p->sewaRef->penghuniRef->username_penghuni}}</td>
+                      <th>{{$p->bulan}}</th>
                       <td>{{$p->bayar_sewa}}</td>
                       <td>{{$p->sisa_pembayaran}}</td>
                       <td>{{$p->tanggal_pembayaran}}</td>

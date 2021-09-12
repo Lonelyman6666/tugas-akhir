@@ -53,15 +53,17 @@
                       <td>{{$tgl->isoFormat('D MMMM Y')}}</td>
                       <td>{{$p->status}}</td>
                       <td>
+                        @if($p->status == "Menunggu")
                         <div class="btn-group">
-                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Action
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="{{url('/admin/pemesanan/'.'diterima/'.$p->id)}}">Terima</a>
-                              <a class="dropdown-item" href="{{url('/admin/pemesanan/'.'ditolak/'.$p->id)}}">Tolak</a>
-                            </div>
-                          </div>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{url('/admin/pemesanan/'.'diterima/'.$p->id)}}">Terima</a>
+                            <a class="dropdown-item" href="{{url('/admin/pemesanan/'.'ditolak/'.$p->id)}}">Tolak</a>
+                        </div>
+                        </div>
+                        @endif
                       </td>
                     </tr>
                     @endforeach

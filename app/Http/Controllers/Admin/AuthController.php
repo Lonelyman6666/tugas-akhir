@@ -22,12 +22,15 @@ class AuthController extends Controller
         $checkEmail = Admin::where('email_admin', $email)->first();
         if($checkEmail){
             if(Hash::check($request->password, $checkEmail->password_admin)){
+                if($checkEmail->status == 'Aktif'){
                 Session::put('id_admin', $checkEmail->id);
                 Session::put('is_logged', 1);
                 Session::put('user', 'admin');
                 Session::put('username', $checkEmail->nama_admin);
             
                 return redirect()->route('home-admin');
+                }
+                return redirect('/admin')->with('gagal','Akun Tidak Aktif');
             }
             return redirect('/admin')->with('gagal','Password Yang Anda Masukan Salah'); //jika password salah
         }

@@ -34,6 +34,7 @@ class PembayaranController extends Controller
         $pembayaran->id_sewa = $request->id;
         $pembayaran->bayar_sewa = $request->bayar;
         $pembayaran->sisa_pembayaran = $sisa;
+        $pembayaran->bulan = $request->bulan;
         $pembayaran->tanggal_pembayaran = $request->tanggal;
         $pembayaran->penerima = $request->penerima;
         $pembayaran->status_pembayaran = "Menunggu";

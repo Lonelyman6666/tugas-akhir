@@ -39,6 +39,7 @@
                       <th>No</th>
                       <th>Nama</th>
                       <th>Email</th>
+                      <th>Status</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -49,6 +50,7 @@
                       <td>{{$no++}}</td>  
                       <td>{{$p->nama_admin}}</td>
                       <td>{{$p->email_admin}}</td>
+                      <td>{{$p->status}}</td>
                       <td>
                         <div class="btn-group">
                             <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -56,7 +58,6 @@
                             </button>
                             <div class="dropdown-menu">
                               <a class="dropdown-item" href="{{route('editadmin-admin',$p->id)}}">Edit</a>
-                              <a class="dropdown-item" href="{{route('hapusadmin-admin',$p->id)}}">Hapus</a>
                             </div>
                           </div>
                       </td>

@@ -38,6 +38,7 @@
                         <label class="control-label col-md-3">Status</label>
                         <div class="col-md-8">
                             <select name="status" id="status" class="form-control">
+                                <option value="Aktif">{{$penghuni->status}}</option>
                                 <option value="Aktif">Aktif</option>
                                 <option value="Non-Aktif">Non-Aktif</option>
                             </select>

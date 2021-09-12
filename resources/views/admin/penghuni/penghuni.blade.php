@@ -54,7 +54,6 @@
                             </button>
                             <div class="dropdown-menu">
                               <a class="dropdown-item" href="{{route('editpenghuni-admin',$p->id)}}">Edit</a>
-                              <a class="dropdown-item" href="{{route('hapuspenghuni-admin',$p->id)}}">Hapus</a>
                               <a class="dropdown-item" href="{{route('detailpenghuni-admin',$p->id)}}">Detail</a>
                             </div>
                           </div>

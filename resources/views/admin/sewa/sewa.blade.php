@@ -64,8 +64,7 @@
                               Action
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="{{route('editsewa-admin',$p->id)}}">Edit</a>
-                              <a class="dropdown-item" href="{{route('hapussewa-admin',$p->id)}}">Hapus</a>
+                              <a class="dropdown-item" href="{{route('editsewa-admin',$p->id)}}">Edit</a>   
                             </div>
                           </div>
                       </td>

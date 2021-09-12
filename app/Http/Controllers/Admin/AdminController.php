@@ -28,6 +28,7 @@ class AdminController extends Controller
             $admin->nama_admin = $request->nama;
             $admin->email_admin = $request->email;
             $admin->password_admin = $hash;
+            $admin->status = "Aktif";
             $admin->save();
             if($admin){
                 return redirect()->route('tambahadmin-admin')->with('success', 'Admin Baru Berhasil Ditambahkan');
@@ -45,6 +46,7 @@ class AdminController extends Controller
         $admin = Admin::find($id);
         $admin->nama_admin = $request->nama;
         $admin->email_admin = $request->email;
+        $admin->status = $request->status;
         if($request->password===null){
             $admin->password_admin = $admin->password_admin;
         }else{

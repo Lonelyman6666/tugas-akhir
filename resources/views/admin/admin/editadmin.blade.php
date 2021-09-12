@@ -41,6 +41,16 @@
                       </div>
                     </div>
                     <div class="form-group row">
+                      <label class="control-label col-md-3">Status</label>
+                      <div class="col-md-8">
+                          <select name="status" id="status" class="form-control">
+                              <option value="Aktif">{{$admin->status}}</option>
+                              <option value="Aktif">Aktif</option>
+                              <option value="Non-Aktif">Non-Aktif</option>
+                          </select>
+                      </div>
+                  </div>
+                    <div class="form-group row">
                         <div class="col-md-8">
                           <input class="btn btn-primary" type="submit" value="Update">
                         </div>

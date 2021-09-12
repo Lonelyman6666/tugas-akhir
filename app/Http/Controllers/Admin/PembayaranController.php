@@ -38,6 +38,7 @@ class PembayaranController extends Controller
         $pembayaran = new pembayaran();
         $pembayaran->id_sewa = $request->id;
         $pembayaran->bayar_sewa = $request->bayar;
+        $pembayaran->bulan = $request->bulan;
         $pembayaran->sisa_pembayaran = $sisa;
         $pembayaran->tanggal_pembayaran = $request->tanggal;
         $pembayaran->penerima = $request->penerima;
@@ -82,6 +83,7 @@ class PembayaranController extends Controller
         $pembayaran = Pembayaran::find($id);
         $pembayaran->id_sewa = $request->id;
         $pembayaran->bayar_sewa = $request->bayar;
+        $pembayaran->bulan = $request->bulan;
         $pembayaran->sisa_pembayaran = $sisa;
         $pembayaran->tanggal_pembayaran = $request->tanggal;
         $pembayaran->penerima = $request->penerima;
